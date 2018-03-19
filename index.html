@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+
+	<title>Weather Bar - Live Weather Displayed in Menu Bar</title>
+
+	<meta name="description" content="Weather Bar lives in your Menu Bar giving you access to beautiful real-time weather conditions and a generous 15-day forecast.">
+	<meta name="keywords" content="Weather Bar, Weather App, Desktop App, MacOS, Windows, Linux, Menu Bar, Forecast, Conditions, Cross Platform">
+
+	<meta name="author" content="Weather Bar">
+	<meta name="robots" content="noodp,noydir">
+	<meta name="robots" content="index,follow">
+	<meta name="coverage" content="worldwide">
+	<meta name="cache-control" content="public">
+	<meta name="googlebot" content="index,follow">
+
+	<!-- Mobile Metadata -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Weather Bar">
+	<meta name="application-name" content="Weather Bar">
+
+	<!-- Twitter Metadata -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:site" content="@mrmidi">
+	<meta property="twitter:title" content="Weather Bar - Live Weather Displayed in Menu Bar">
+	<meta property="twitter:description" content="Weather Bar lives in your Menu Bar giving you access to beautiful real-time weather conditions and a generous 15-day forecast.">
+	<meta property="twitter:creator" content="@mrmidi">
+	<meta property="twitter:image:src" content="https://weatherbarapp.com/assets/img/card-image.jpg">
+	<meta property="twitter:domain" content="weatherbarapp.com">
+
+	<!-- Open Graph Metadata -->
+	<meta property="og:url" content="https://weatherbarapp.com">
+	<meta property="og:title" content="Weather Bar - Live Weather Displayed in Menu Bar">
+	<meta property="og:description" content="Weather Bar lives in your Menu Bar giving you access to beautiful real-time weather conditions and a generous 15-day forecast.">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://weatherbarapp.com/assets/img/card-image.jpg">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:site_name" content="Weather Bar">
+
+	<!-- Structured Metadata -->
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org",
+			"@type": "WebSite",
+			"url": "https://weatherbarapp.com",
+			"name": "Weather Bar - Live Weather Displayed in Menu Bar",
+			"keywords": "Weather Bar, Weather App, Desktop App, MacOS, Windows, Linux, Menu Bar, Forecast, Conditions, Cross Platform",
+			"thumbnailUrl": "https://weatherbarapp.com/assets/img/card-image.jpg",
+			"author": {
+				"@type": "Person",
+				"name": "Weather Bar"
+			},
+			"description": "Weather Bar lives in your Menu Bar giving you access to beautiful real-time weather conditions and a generous 15-day forecast.",
+			"publisher": "Weather Bar"
+		}
+	</script>
+	<script type='application/ld+json'>
+		{
+			"@context": "http://schema.org/",
+			"@type": "SoftwareApplication",
+			"name": "Weather Bar",
+			"softwareVersion": "1.0.0",
+			"applicationCategory": "http://schema.org/SoftwareApplication",
+			"operatingSystem": [
+				"MacOS",
+				"Windows",
+				"Linux"
+			],
+			"downloadUrl": [
+				"https://weatherbarapp.com"
+			],
+			"aggregateRating": {
+				"@type": "AggregateRating",
+				"ratingValue": "4.6",
+				"ratingCount": "8864"
+			},
+			"offers": {
+				"@type": "Offer",
+				"price": "0.00",
+				"priceCurrency": "USD"
+			}
+		}
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/plugins.min.css">
+
+	<!--External fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+
+	<!-- Icons -->
+  <link href="favicon.ico" rel="shortcut icon">
+</head>
+
+<body class="weather-bar-grid">
+
+	<!-- Preloader -->
+
+	<div id="hellopreloader"></div>
+
+	<!-- ... end Preloader -->
+
+	<div class="content-wrapper">
+
+
+		<!-- Main Slider -->
+
+		<div class="weather-bar-module weather-bar-module-slider container-full-width">
+			<div class="swiper-container main-slider navigation-center-both-sides">
+
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide bg-1 main-slider-bg-light">
+						<div class="flying-bird"></div>
+						<div class="container table">
+							<div class="row table-cell">
+
+								<div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+									<div class="slider-content align-both">
+										<h2 class="slider-content-title" data-swiper-parallax="-100">
+											Weather Bar <small>v1.0.0</small>
+										</h2>
+
+										<h6 class="slider-content-text" data-swiper-parallax="-200">
+											An Open Source Weather Application that lives in your Menu Bar giving you beautiful access to real-time weather conditions and a generous 15-day forecast.
+										</h6>
+
+										<div class="main-slider-btn-wrap" data-swiper-parallax="-300">
+
+											<a id="platform-macos" href="https://github.com/manifestinteractive/weather-bar-app/releases/download/v1.0.0/macos-weather-bar-1.0.0.dmg" class="btn btn-market hidden">
+												<i class="fab fa-fw fa-apple"></i>
+												<div class="text">
+													<span class="sup-title">DMG</span>
+													<span class="title">MacOS</span>
+												</div>
+											</a>
+
+											<a id="platform-windows" href="https://github.com/manifestinteractive/weather-bar-app/releases/download/v1.0.0/win32-weather-bar-1.0.0.exe" class="btn btn-market hidden">
+												<i class="fab fa-fw fa-windows"></i>
+												<div class="text">
+													<span class="sup-title">EXE</span>
+													<span class="title">Windows</span>
+												</div>
+											</a>
+
+											<a id="platform-linux" href="https://github.com/manifestinteractive/weather-bar-app/releases/download/v1.0.0/linux-weather-bar-1.0.0-x86_64.AppImage" class="btn btn-market hidden">
+												<i class="fab fa-fw fa-linux"></i>
+												<div class="text">
+													<span class="sup-title">APPIMAGE</span>
+													<span class="title">Linux</span>
+												</div>
+											</a>
+
+											<a href="https://github.com/manifestinteractive/weather-bar-app/releases/tag/v1.0.0" target="_blank" class="btn btn-market">
+												<i class="fas fa-arrow-circle-right"></i>
+												<div class="text">
+													<span class="sup-title">AVAILABLE</span>
+													<span class="title">Platforms</span>
+												</div>
+											</a>
+
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- ... end Main Slider -->
+
+		<!-- Video -->
+
+		<section class="bg-8 background-contain pt100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<div class="weather-bar-module weather-bar-heading">
+							<h6 class="heading-sup-title">Watch the video</h6>
+							<h2 class="heading-title">
+								Introduction
+							</h2>
+							<p class="heading-text">
+								Weather Bar can be installed on Modern Desktop and Laptop computers, running the latest versions of Windows, MacOS and Linux Operating Systems.
+							</p>
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<div class="weather-bar-module weather-bar-our-video">
+							<iframe src="https://player.vimeo.com/video/260607632" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ... end Video -->
+
+		<!-- Info Boxes -->
+
+		<section class="weather-bar-module weather-bar-module-slider bg-blue-lighteen background-contain bg-11 medium-padding100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+						<div class="weather-bar-module weather-bar-heading">
+							<h6 class="heading-sup-title">Screenshots</h6>
+							<h2 class="heading-title">Thoughtful Design</h2>
+							<p class="heading-text">Weather Bar provides Live Weather based on Actual Weather Conditions &amp; Astronomy.
+							</p>
+						</div>
+						<div class="row">
+							<div class="col-lg-6 col-md-6 col-sm-12">
+								<div class="weather-bar-module weather-bar-info-box info-box--standard">
+									<div class="info-box-image display-flex">
+										<svg class="weather-bar-icon weather-bar-icon-checked"><use xlink:href="#weather-bar-icon-checked"></use></svg>
+										<h6 class="info-box-title">Advanced Settings</h6>
+									</div>
+									<p class="info-box-text">
+										View Current Conditions and 15 Day Forecasts with the ability to save an unlimited number of Custom Locations.
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12">
+								<div class="weather-bar-module weather-bar-info-box info-box--standard">
+									<div class="info-box-image display-flex">
+										<svg class="weather-bar-icon weather-bar-icon-checked"><use xlink:href="#weather-bar-icon-checked"></use></svg>
+										<h6 class="info-box-title">Multilingual</h6>
+									</div>
+									<p class="info-box-text">
+										Support for top 10 Spoken Languages: Arabic, Chinese, English, French, German, Japanese, Malay, Portuguese, Russian, Spanish
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-5 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12 col-xs-12">
+						<div class="screen-shots swiper-container pagination-bottom slider-tripple-right-image">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="assets/img/screenshots/01.png" alt="slide">
+								</div>
+								<div class="swiper-slide">
+									<img src="assets/img/screenshots/02.png" alt="slide">
+								</div>
+								<div class="swiper-slide">
+									<img src="assets/img/screenshots/03.png" alt="slide">
+								</div>
+								<div class="swiper-slide">
+									<img src="assets/img/screenshots/04.png" alt="slide">
+								</div>
+								<div class="swiper-slide">
+									<img src="assets/img/screenshots/05.png" alt="slide">
+								</div>
+								<div class="swiper-slide">
+									<img src="assets/img/screenshots/06.png" alt="slide">
+								</div>
+								<div class="swiper-slide">
+									<img src="assets/img/screenshots/07.png" alt="slide">
+								</div>
+								<div class="swiper-slide">
+									<img src="assets/img/screenshots/08.png" alt="slide">
+								</div>
+								<div class="swiper-slide">
+									<img src="assets/img/screenshots/09.png" alt="slide">
+								</div>
+								<div class="swiper-slide">
+									<img src="assets/img/screenshots/10.png" alt="slide">
+								</div>
+								<div class="swiper-slide">
+									<img src="assets/img/screenshots/11.png" alt="slide">
+								</div>
+								<div class="swiper-slide">
+									<img src="assets/img/screenshots/12.png" alt="slide">
+								</div>
+							</div>
+							<!-- If we need pagination -->
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ... end Info Boxes -->
+
+	</div>
+
+
+	<!-- Footer -->
+
+	<footer class="footer" id="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+					<div class="widget w-info">
+						<div class="site-logo">
+							<a href="index.html" class="full-block"></a>
+							<div class="logo-text">
+								<div class="logo-title">Weather Bar</div>
+								<div class="logo-sub-title">v1.0.0</div>
+							</div>
+						</div>
+
+						<p>
+							Weather Bar is a Weather Application that lives in your Menu Bar giving you beautiful access to real-time weather conditions and a generous 15-day forecast.
+						</p>
+
+						<a href="https://peterschmalfeldt.com" class="learn-more" target="_blank">Created by:&nbsp; Peter Schmalfeldt</a>
+					</div>
+
+				</div>
+
+				<div class="col-lg-2 col-lg-offset-1 col-md-3 col-sm-12 col-sm-offset-0 col-xs-12">
+					<div class="widget w-list">
+
+						<h5 class="widget-title">Userful Links</h5>
+						<ul class="list list--primary">
+							<li>
+								<a href="https://github.com/manifestinteractive/weather-bar-app/issues">Report an Issue</a>
+								<svg class="weather-bar-icon weather-bar-icon-arrow-right"><use xlink:href="#weather-bar-icon-arrow-right"></use></svg>
+							</li>
+							<li>
+								<a href="https://github.com/manifestinteractive/weather-bar-app/releases">App Releases</a>
+								<svg class="weather-bar-icon weather-bar-icon-arrow-right"><use xlink:href="#weather-bar-icon-arrow-right"></use></svg>
+							</li>
+							<li>
+								<a href="https://github.com/manifestinteractive/weather-bar-app/blob/master/LICENSE">Software License</a>
+								<svg class="weather-bar-icon weather-bar-icon-arrow-right"><use xlink:href="#weather-bar-icon-arrow-right"></use></svg>
+							</li>
+							<li>
+								<a href="https://github.com/manifestinteractive/weather-bar-app/blob/master/README.md">Source Code</a>
+								<svg class="weather-bar-icon weather-bar-icon-arrow-right"><use xlink:href="#weather-bar-icon-arrow-right"></use></svg>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-sm-offset-0 col-xs-12">
+					<div class="widget w-info">
+
+						<h5 class="widget-title">Open Source</h5>
+
+						<p>
+							Help Fund <a href="https://github.com/manifestinteractive/weather-bar-app/projects/1" target="_blank" class="learn-more">Future Development</a> by donating to our project.
+						</p>
+
+						<a href="https://www.paypal.me/manifestinteractive" target="blank" class="btn btn--green full-width btn--with-shadow">
+							Donate to Project
+						</a>
+					</div>
+
+					<br />
+
+					<div class="widget w-follow">
+						<ul>
+							<li>Developer:</li>
+							<li>
+								<a href="https://twitter.com/mrmidi"><i class="fab fa-twitter"></i></a>
+							</li>
+							<li>
+								<a href="https://github.com/manifestinteractive"><i class="fab fa-github"></i></a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/peter-schmalfeldt/"><i class="fab fa-linkedin"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="sub-footer">
+			<a class="back-to-top" href="#">
+					<svg class="weather-bar-icon weather-bar-icon-arrow-top"><use xlink:href="#weather-bar-icon-arrow-top"></use></svg>
+				</a>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<span>
+              Copyright &copy; 2018 <a href="https://peterschmalfeldt.com" class="sub-footer__link">Manifest Interactive, LLC</a>
+            </span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+
+	<!-- End Footer -->
+
+
+	<!-- Used SVG-icons -->
+
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: block; width: 1px; height: 1px; visibility: hidden; opacity: 0;">
+		<symbol id="weather-bar-icon-checked" viewBox="0 0 512 512">
+			<path d="m450 240c-1-8-7-13-15-13-7 1-13 7-13 15 1 4 1 9 1 14 0 109-89 198-198 198-109 0-198-89-198-198 0-109 89-198 198-198 43 0 84 14 119 40 6 4 14 3 19-3 4-6 3-15-3-19-39-30-86-45-135-45-124 0-225 101-225 225 0 124 101 225 225 225 124 0 225-101 225-225 0-5 0-11 0-16z m46-178c-20-21-54-21-75 0l-197 197-70-70c-21-21-55-21-76 0-20 21-20 55 0 75l121 121c7 7 16 10 25 10 9 0 18-3 25-10l247-248c21-21 21-54 0-75z m-19 56l-248 247c-3 4-8 4-11 0l-120-120c-10-10-10-27 0-37 5-5 12-7 18-7 7 0 14 2 19 7l71 72c5 5 11 7 18 7 6 0 13-2 17-7l199-199c10-10 27-10 37 0 10 10 10 27 0 37z"/>
+		</symbol>
+
+		<symbol id="weather-bar-icon-message" viewBox="0 0 512 512">
+			<path d="m512 198c0-1-1-2-1-3-1-3-2-5-5-7l-73-51 0-55c0-7-6-13-13-13l-85 0-71-50c-5-3-11-3-15 0l-73 50-84 0c-7 0-13 6-13 13l0 54-73 51c-4 3-6 7-6 11 0 0 0 0 0 0l0 284c0 4 2 7 4 9 3 3 6 4 10 4 0 0 0 0 0 0l485 0c7 0 13-6 13-14z m-79-29l42 29-42 29z m-177-123l33 23-66 0z m-150 49l300 0 0 150-101 70-41-32c0 0 0 0 0 0-5-3-11-3-16 0l-41 33-101-70z m-27 73l0 60-43-30z m-53 55l159 110-158 122z m26 246l204-159 204 158z m275-137l158-110 1 233z m18-184l-178 0c-7 0-13 6-13 13 0 7 6 13 13 13l178 0c7 0 13-6 13-13 0-7-6-13-13-13z m0 68l-178 0c-7 0-13 6-13 13 0 7 6 13 13 13l178 0c7 0 13-6 13-13 0-7-6-13-13-13z"/>
+		</symbol>
+
+		<symbol id="weather-bar-icon-message-closed-envelope-1" viewBox="0 0 512 512">
+			<path d="m451 62l-390 0c-34 0-61 26-61 58l0 272c0 32 27 58 61 58l390 0c34 0 61-26 61-58l0-272c0-32-27-58-61-58z m0 337l-390 0c-5 0-9-3-9-7l0-236 176 149c4 3 8 5 13 5l30 0c5 0 9-2 13-5l176-149 0 236c0 4-4 7-9 7z m-195-140l-172-146 344 0z"/>
+		</symbol>
+
+		<symbol id="weather-bar-icon-telephone-keypad-with-ten-keys" viewBox="0 0 512 512">
+			<path d="m256 419c-26 0-47 21-47 46 0 26 21 47 47 47 26 0 47-21 47-47 0-25-21-46-47-46z m-140-419c-25 0-46 21-46 47 0 25 21 46 46 46 26 0 47-21 47-46 0-26-21-47-47-47z m0 140c-25 0-46 21-46 46 0 26 21 47 46 47 26 0 47-21 47-47 0-25-21-46-47-46z m0 139c-25 0-46 21-46 47 0 25 21 46 46 46 26 0 47-21 47-46 0-26-21-47-47-47z m280-186c25 0 46-21 46-46 0-26-21-47-46-47-26 0-47 21-47 47 0 25 21 46 47 46z m-140 186c-26 0-47 21-47 47 0 25 21 46 47 46 26 0 47-21 47-46 0-26-21-47-47-47z m140 0c-26 0-47 21-47 47 0 25 21 46 47 46 25 0 46-21 46-46 0-26-21-47-46-47z m0-139c-26 0-47 21-47 46 0 26 21 47 47 47 25 0 46-21 46-47 0-25-21-46-46-46z m-140 0c-26 0-47 21-47 46 0 26 21 47 47 47 26 0 47-21 47-47 0-25-21-46-47-46z m0-140c-26 0-47 21-47 47 0 25 21 46 47 46 26 0 47-21 47-46 0-26-21-47-47-47z"/>
+		</symbol>
+
+		<symbol id="weather-bar-icon-arrow-right" viewBox="0 0 512 512">
+			<path d="m505 239c-1-2-2-3-4-3l-92-94c-9-9-23-9-32 0-9 9-9 24 0 33l79 81-79 81c-9 9-9 24 0 33 4 5 10 7 16 7 6 0 11-2 16-7l92-94c2-1 3-2 4-3 5-5 7-11 7-17 0-6-2-13-7-17z m-483-4l13 0c12 0 22 9 22 21 0 12-10 21-22 21l-13 0c-12 0-22-9-22-21 0-12 10-21 22-21z m113 0l71 0c12 0 21 9 21 21 0 12-9 21-21 21l-71 0c-11 0-21-9-21-21 0-12 10-21 21-21z m171 0l136 0c12 0 21 9 21 21 0 12-9 21-21 21l-136 0c-12 0-21-9-21-21 0-12 9-21 21-21z"/>
+		</symbol>
+
+		<symbol id="weather-bar-icon-arrow-right1" viewBox="0 0 512 512">
+			<path d="m505 239c-1-2-2-3-4-3l-92-94c-9-9-23-9-32 0-9 9-9 24 0 33l79 81-79 81c-9 9-9 24 0 33 4 5 10 7 16 7 6 0 11-2 16-7l92-94c2-1 3-2 4-3 5-5 7-11 7-17 0-6-2-13-7-17z"/>
+		</symbol>
+
+		<symbol id="weather-bar-icon-arrow-top" viewBox="0 0 512 512">
+			<path d="m256 364c16 0 27 12 27 27l0 93c0 15-12 27-27 27-15 0-27-13-27-27l0-93c-1-15 11-27 27-27z m0-296c16 0 27 12 27 27l0 168c0 16-12 27-27 27-15 0-27-12-27-27l0-168c-1-15 11-27 27-27z m-22-60c-2 1-3 3-4 6l-121 119c-12 11-12 30 0 41 11 12 31 12 43 0l103-102 104 102c12 12 32 12 43 0 7-6 9-13 9-20 0-8-3-16-9-21l-121-119c-1-3-2-4-4-6-5-5-14-8-21-8-8 0-17 3-22 8z m0 0c-2 1-3 3-4 6l-121 119c-12 11-12 30 0 41 11 12 31 12 43 0l103-102 104 102c12 12 32 12 43 0 7-6 9-13 9-20 0-8-3-16-9-21l-121-119c-1-3-2-4-4-6-5-5-14-8-21-8-8 0-17 3-22 8z"/>
+		</symbol>
+	</svg>
+
+	<!-- ... end Used SVG-icons -->
+
+
+	<!-- Scripts -->
+
+	<script src="assets/js/plugins.min.js"></script>
+	<script src="assets/js/site.min.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115899502-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-115899502-1');
+	</script>
+
+</body>
+
+</html>
